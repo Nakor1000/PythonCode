@@ -1,6 +1,7 @@
 # At first I wrote a program to do the calculations with the given sequence hard coded into the language, however, I realized it would be much more useful 
 # to be able to enter in any sequence we want and get the correct calculations. 
 print "Enter Sequence:",
+# Be sure to enter your sequence in all uppercase letters.
 sequence = raw_input()
 T = sequence.count('T')
 print "T -",
@@ -15,7 +16,7 @@ totalbases = len(sequence)
 print "Total bases in sequence -",
 print '%s' % totalbases
 print "AT content -",
-print '%.3f' % (total/(totalbases/1.0))
+print '%.2f' % (total/(totalbases/1.0)*100)+'%'
 # It took me a little while to figure out how to force floating point division without having a definite decimal in the values I was using. 
 # It turns out you can simply divide one side of the equation by 1.0, and it funtions the same as if your value was a decimal. 
 # In this case, the value in question was the calculated length of the sequence entered. 
