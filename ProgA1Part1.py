@@ -2,7 +2,7 @@
 # to be able to enter in any sequence we want and get the correct calculations. 
 print "Enter Sequence:",
 # Be sure to enter your sequence in all uppercase letters.
-sequence = raw_input()
+sequence = raw_input().upper()
 T = sequence.count('T')
 print "T -",
 print '%s' % T
