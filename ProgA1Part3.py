@@ -1,3 +1,4 @@
+# I did a lot of googling to teach myself how to form the compliment 
 print "Enter Sequence:",
 spaces = " "*15
 sequence = raw_input().upper()
@@ -8,3 +9,4 @@ for nucleotide in sequence:
 ans = ''.join(answer) 
 print '%s' % spaces,
 print '%s' % ans
+# I feel like I could tidy this up a bit. 
