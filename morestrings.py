@@ -10,4 +10,4 @@ print s.count("TOM")
 s2 = "eeoineTOMaksdTOMjifSallyjTOMwqindnTOM"
 loc = s2.find("Sally")
 print s2[loc:24]
-
+print loc

@@ -1,4 +1,4 @@
-# I did a lot of googling to teach myself how to form the compliment 
+# I did a bit of googling to find out how to form complimentary values. 
 print "Enter Sequence:",
 spaces = " "*15
 sequence = raw_input().upper()
