@@ -8,11 +8,11 @@ print 'Length of Sequence -'
 print len(s2)
 loc = s2.find('GAATTC')
 print "Location of Restriction site -",
-print loc + 2
+print loc+1
 print "Fragment Length Before Restriction Site -",
-print len(s2[0:loc+2])
+print len(s2[0:loc+1])
 print "Fragment Length After Restriction Site -",
-print len(s2[loc+2:55])
+print len(s2[loc+1:55])
 
 
 
