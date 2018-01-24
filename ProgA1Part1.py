@@ -17,5 +17,4 @@ print '%s' % totalbases
 print "AT content -",
 print '%.2f' % (total/(totalbases/1.0)*100)+'%'
 # It took me a little while to figure out how to force floating point division without having a definite decimal in the values I was using. 
-# It turns out you can simply divide one side of the equation by 1.0, and it funtions the same as if your value was a decimal. 
-# In this case, the value in question was the calculated length of the sequence entered. 
+# It turns out you can simply divide one side of the equation by 1.0, and it funtions the same as if one of your values were floating point. 

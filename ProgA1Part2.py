@@ -13,9 +13,3 @@ print "Fragment Length Before Restriction Site -",
 print len(s2[0:loc+1])
 print "Fragment Length After Restriction Site -",
 print len(s2[loc+1:55])
-
-
-
-
-
-
