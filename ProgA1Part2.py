@@ -2,7 +2,7 @@
 # Based on the other programs for this assignment, the code I originally wrote should have worked, but it didn't. 
 # I plan to continue working on it to allow the use of random sequences, but for now, this meets the requirments,
 # of the assignment. :(
-print 'ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCA'
+print 'ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT'
 s2 = 'ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT'
 print 'Length of Sequence -',
 print len(s2)
