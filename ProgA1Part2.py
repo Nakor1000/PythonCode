@@ -4,7 +4,7 @@
 # of the assignment. :(
 print 'ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCA'
 s2 = 'ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT'
-print 'Length of Sequence -'
+print 'Length of Sequence -',
 print len(s2)
 loc = s2.find('GAATTC')
 print "Location of Restriction site -",
