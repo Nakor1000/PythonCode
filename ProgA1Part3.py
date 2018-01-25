@@ -20,5 +20,4 @@ print '%s' % spaces,
 print '%s' % ans 
 # I made the complimentray strand a different color, because if you put in a sequence
 # long enough that it occupies more than one line, then it becomes hard to keep track 
-# of which strand is which.
-# This way you can easily tell which strand is which if you have a very long sequence. 
+# of which strand is which. Making the output a different color makes it easier to tell. 
