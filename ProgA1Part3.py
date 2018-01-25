@@ -1,11 +1,6 @@
 # I did a bit of googling to find out how to form complimentary values. 
-red   = "\033[1;31m"  
-blue  = "\033[1;34m"
 cyan  = "\033[1;36m"
-green = "\033[0;32m"
 reset = "\033[0;0m"
-bold    = "\033[;1m"
-reverse = "\033[;7m"
 import sys
 print "Enter Sequence:",
 spaces = " "*15

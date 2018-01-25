@@ -8,7 +8,6 @@ loc2 = str(seq[63:91]).lower()
 loc3 = str(seq[91:len(seq)]).upper()
 print "Sequence:",
 print '%s' % loc1+loc2+loc3
-
 # This program would have been extremely involved if I were to try and make it work for any random sequence.
 # The main problem is how to get the program to recognize when there is an exon or intron. 
 
