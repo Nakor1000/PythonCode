@@ -1,4 +1,12 @@
 # I did a bit of googling to find out how to form complimentary values. 
+red   = "\033[1;31m"  
+blue  = "\033[1;34m"
+cyan  = "\033[1;36m"
+green = "\033[0;32m"
+reset = "\033[0;0m"
+bold    = "\033[;1m"
+reverse = "\033[;7m"
+import sys
 print "Enter Sequence:",
 spaces = " "*15
 sequence = raw_input().upper()
@@ -6,7 +14,11 @@ answer = []
 complement = {'A':'T', 'T':'A', 'G':'C', 'C':'G'}
 for basepair in sequence:
     answer.append(complement[basepair])
-ans = ''.join(answer) 
+ans = ''.join(answer)
+sys.stdout.write(cyan)
 print '%s' % spaces,
-print '%s' % ans
-# I feel like I could tidy this up a bit. 
+print '%s' % ans 
+# I made the complimentray strand a different color, because if you put in a sequence
+# long enough that it occupies more than one line, then it becomes hard to keep track 
+# of which strand is which.
+# This way you can easily tell which strand is which if you have a very long sequence. 
