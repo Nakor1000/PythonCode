@@ -17,3 +17,8 @@ for line in csv:
         print ' Medium    | '+ species
     elif bio.high(seq):
         print ' High      | ' + species
+
+# This is a script that utilizes three seperate
+#functions to return True based on three parameters.
+#These parameters are based on relative adenine and thymine content in genetic sequences, 
+#and are given designations of "High, Medium or Low". 

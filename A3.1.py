@@ -15,6 +15,10 @@ for line in csv:
     print bio.ATmagnitude(seq)+'     |',
     print species
     
-  
+# This is the script that works with the single function that
+#returns one of three strings, "High, Medium or Low". 
+
+# Working with this script has helped me greatly in understanding
+#the relationship between functions within modules, and scripts.
 
     

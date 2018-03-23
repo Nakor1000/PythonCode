@@ -1,4 +1,5 @@
 #This is my AT content function(use bioinformatics.atcontent)
+#This was recently made into a proper function. :)
 def atcontent(sequence):
     seqUpper = sequence.upper()
     T = seqUpper.count('T')
@@ -34,7 +35,7 @@ def pctOfProtein(polypeptide, residues):
     print 'Percent of Residues:',
     print '%.2f' % (count/(total/1.0)* 100)+'%' #This is the calculation for percentages.
 
-
+#This function performs the 3 following functions in one.
 def ATmagnitude(sequence):
     if float(atcontent(sequence)) <= 45.00:
         return str('Low')
@@ -44,17 +45,17 @@ def ATmagnitude(sequence):
         return str('High')    
     
 
-
+#This function looks for genetic sequences with contents of Adenine and Thymine at 45% and below. 
 def low(sequence):
     if float(atcontent(sequence)) <= 45.00:
         return True
     
-    
+#This function looks for genetic sequences with contents of Adenine and Thymine between 45.01% and 64.99%.    
 def medium(sequence):
     if 65.00 > float(atcontent(sequence)) > 45.00: 
         return True
     
-
+#This function looks for genetic sequences with contents of Adenine and Thymine 65% and above.
 def high(sequence):
     if float(atcontent(sequence)) >= 65.00:
         return True
