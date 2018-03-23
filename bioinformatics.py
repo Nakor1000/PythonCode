@@ -1,23 +1,14 @@
-#This is my AT content function(use Bioinformatics.ATcontent)
-#This needs to be made into a proper function without user input
-def ATcontent(prompt):
-    print prompt,
-    sequence = raw_input().upper()
-    T = sequence.count('T')
-    print "T -",
-    print '%s' % T
-    A = sequence.count('A')
-    print "A -",
-    print '%s' % A
+#This is my AT content function(use bioinformatics.atcontent)
+def atcontent(sequence):
+    seqUpper = sequence.upper()
+    T = seqUpper.count('T')
+    A = seqUpper.count('A')
     total = int(A) + int(T)
-    print "Total A's and T's -",
-    print '%s' % total
     totalbases = len(sequence)
-    print "Total bases in sequence -",
-    print '%s' % totalbases
-    print "AT content -",
-    print '%.2f' % (total/(totalbases/1.0)*100)+'%'
+    percent = '%.2f' % (total/(totalbases/1.0)*100)
+    return percent
     
+
 #This is my complimentary DNA sequence generator.(Use Bioinformatics.CompStrand) 
 #This needs to be made into a proper function without user input
 def CompStrand(prompt):
@@ -33,12 +24,39 @@ def CompStrand(prompt):
     print '%s' % complement.upper()
     
 def pctOfProtein(polypeptide, residues):
+    polypeptideUpper = polypeptide.upper()
     total = len(polypeptide) #gives total length of sequence entered
     count = 0 #This holds a count of residues, because you can't add to nothing, so instead we say "zero +" 
     print 'Length of Polypeptide:',
     print total
     for let in residues: #This loops allows the program to cycle through the sequence in search of given residues
-        count = count + polypeptide.count(let)
+        count = count + polypeptideUpper.count(let.upper())
     print 'Percent of Residues:',
-    print '%.2f' % (count/(total/1.0)*100)+'%' #This is the calculation for percentages.
+    print '%.2f' % (count/(total/1.0)* 100)+'%' #This is the calculation for percentages.
+
+
+def ATmagnitude(sequence):
+    if float(atcontent(sequence)) <= 45.00:
+        return str('Low')
+    elif 65.00 > float(atcontent(sequence)) > 45.00: 
+        return str('Medium')
+    elif float(atcontent(sequence)) >= 65.00:
+        return str('High')    
+    
+
+
+def low(sequence):
+    if float(atcontent(sequence)) <= 45.00:
+        return True
+    
+    
+def medium(sequence):
+    if 65.00 > float(atcontent(sequence)) > 45.00: 
+        return True
+    
+
+def high(sequence):
+    if float(atcontent(sequence)) >= 65.00:
+        return True
+
     
