@@ -50,12 +50,12 @@ def low(sequence):
     if float(atcontent(sequence)) <= 45.00:
         return True
     
-#This function looks for genetic sequences with contents of Adenine and Thymine between 45.01% and 64.99%.    
+#This function looks for genetic sequences with contents of Adenine and Thymine from 45.01% up to 64.99%.    
 def medium(sequence):
     if 65.00 > float(atcontent(sequence)) > 45.00: 
         return True
     
-#This function looks for genetic sequences with contents of Adenine and Thymine 65% and above.
+#This function looks for genetic sequences with contents of Adenine and Thymine at 65% and above.
 def high(sequence):
     if float(atcontent(sequence)) >= 65.00:
         return True
