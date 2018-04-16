@@ -12,7 +12,7 @@ for match in re.finditer(r"A.TAAT", seqUpper):
     splice.append(match.start() + 3)
     pass
 
-for match in re.finditer(r"GC(A|G)(A|T)TG", seqUpper): #I used the pass command for my loops because it made it les cumbersome to work with the results.  
+for match in re.finditer(r"GC(A|G)(A|T)TG", seqUpper): #I used the pass command for my loops because it made it less cumbersome to work with the results.  
     splice.append(match.start() + 4)
     pass
 
@@ -23,10 +23,6 @@ print message +' '+str(lis[2]-lis[1])+'.'
 print message +' '+str(lis[3]-lis[2])+'.'
 print message +' '+str(lis[4]-lis[3])+'.'
 print message +' '+str(strand-lis[4])+'.'
-
-
-
-
 
 
 

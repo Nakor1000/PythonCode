@@ -22,3 +22,5 @@ for line in csv:
 #functions to return True based on three parameters.
 #These parameters are based on relative adenine and thymine content in genetic sequences, 
 #and are given designations of "High, Medium or Low". 
+
+
