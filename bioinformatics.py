@@ -61,9 +61,9 @@ def high(sequence):
         return True
 
 
-def translate_dna(seq):
+def translate_dna(seq): # This is my homework for ProgA5. It translates genetic sequences into the corresponding polypeptides. 
       
-    codons = {
+    codons = { # This is the dictionary relating codons(keys) to amino acids(values).           
         'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
         'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
         'AAC':'N', 'AAT':'N', 'AAA':'K', 'AAG':'K',
@@ -81,11 +81,11 @@ def translate_dna(seq):
         'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_',
         'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W',}
     
-    amino =""
-    if len(seq)%3 == 0:
-        for i in range(0, len(seq), 3):
+    polypeptide ="" # This line allows me to begin building my polypeptide, starting with zero amino acids.
+    if len(seq)%3 == 0: # This makes sure that the sequence entered is divisible by 3, since codons are 3 bases long.
+        for i in range(0, len(seq), 3): # This loop moves over the sequence and slices out the codons, then joins the resulting values together.
             codon = seq[i:i + 3]
-            amino += codons[codon]
-        return amino
+            polypeptide += codons[codon]
+        return polypeptide # this returns a polypeptide translated from the entered DNA sequence. 
     else:
-        return 'Sequence not divisible by 3. Cannot be translated.'
+        return 'Error: Sequence not divisible by 3. Cannot be translated.' # This gives an error message if the DNA sequence has too many or too few bases. 
