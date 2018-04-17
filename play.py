@@ -42,6 +42,7 @@ def fib(n):  # return Fibonacci series up to n
         a, b = b, a+b
     return result
 
-print fib(7000)    
+print fib(9000)    
 
 timemod.checktime('')
+

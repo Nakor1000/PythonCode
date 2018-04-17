@@ -61,6 +61,26 @@ def high(sequence):
         return True
 
 
+def reversetrans(seq):
+    cyan  = "\033[1;36m"
+    reset = "\033[0;0m"
+    import sys
+    transcript = seq.replace('U', 't')
+    sys.stdout.write(cyan)
+    return (' '*18) + 'DNA:' + ' ' + transcript.upper()
+
+
+
+def transcription(seq):
+    cyan  = "\033[1;36m"
+    reset = "\033[0;0m"
+    import sys
+    transcript = seq.replace('T', 'u')
+    sys.stdout.write(cyan)
+    return (' '*17) + 'RNA:' + ' ' + transcript.upper()
+
+
+
 def translate_dna(seq): # This is my homework for ProgA5. It translates genetic sequences into the corresponding polypeptides. 
       
     codons = { # This is the dictionary relating codons(keys) to amino acids(values).           
