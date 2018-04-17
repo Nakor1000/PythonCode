@@ -1,6 +1,6 @@
 from bioinformatics import translate_dna
 
-print 'Enter a DNA sequence:',
+print 'Enter codon sequence:',
 seq = raw_input().upper()
 print 'Protein:'+' '+translate_dna(seq)
 

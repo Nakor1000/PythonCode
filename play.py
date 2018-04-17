@@ -1,17 +1,6 @@
 import re
 import bioinformatics
-from datetime import datetime, timedelta
-import time
-ticks = time.time()
-
-
-
-localtime = time.strftime("%a, %d %b %Y %I:%M %z ", time.localtime())
-print localtime
-print ticks
-
-
-
+import timemod
 
 
 
@@ -55,4 +44,4 @@ def fib(n):  # return Fibonacci series up to n
 
 print fib(7000)    
 
-
+timemod.checktime('')
