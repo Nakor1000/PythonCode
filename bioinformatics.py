@@ -1,5 +1,4 @@
-#This is my AT content function(use bioinformatics.atcontent)
-#This was recently made into a proper function. :)
+#This is my AT content function
 def atcontent(sequence):
     seqUpper = sequence.upper()
     T = seqUpper.count('T')
@@ -10,20 +9,18 @@ def atcontent(sequence):
     return percent
     
 
-#This is my complimentary DNA sequence generator.(Use Bioinformatics.CompStrand) 
-#This needs to be made into a proper function without user input
-def CompStrand(prompt):
+#This is my complimentary DNA sequence generator. 
+def CompStrand(sequence):
     cyan  = "\033[1;36m"
     reset = "\033[0;0m"
     import sys
-    print "Enter Sequence:",
     spaces = " "*15
-    sequence = raw_input().upper()
     complement = sequence.replace('A', 't').replace('G', 'c').replace('T', 'a').replace('C', 'g')
     sys.stdout.write(cyan)
     print '%s' % spaces,
-    print '%s' % complement.upper()
+    return '%s' % complement.upper()
     
+#This function gives the percentage of a polypeptide that is comprised of a given list of amino acids.
 def pctOfProtein(polypeptide, residues):
     polypeptideUpper = polypeptide.upper()
     total = len(polypeptide) #gives total length of sequence entered
@@ -33,7 +30,7 @@ def pctOfProtein(polypeptide, residues):
     for let in residues: #This loops allows the program to cycle through the sequence in search of given residues
         count = count + polypeptideUpper.count(let.upper())
     print 'Percent of Residues:',
-    print '%.2f' % (count/(total/1.0)* 100)+'%' #This is the calculation for percentages.
+    print '%.2f' % (count/(total/1.0)* 100)+'%'+'\n' #This is the calculation for percentages.
 
 #This function performs the 3 following functions in one.
 def ATmagnitude(sequence):
@@ -61,6 +58,7 @@ def high(sequence):
         return True
 
 
+#This function takes an RNA sequence and returns the DNA that codes for it.
 def reversetrans(seq):
     cyan  = "\033[1;36m"
     reset = "\033[0;0m"
@@ -70,7 +68,7 @@ def reversetrans(seq):
     return (' '*18) + 'DNA:' + ' ' + transcript.upper()
 
 
-
+#This function takes coding DNA and transcribes it into the corrosponding RNA sequence. 
 def transcription(seq):
     cyan  = "\033[1;36m"
     reset = "\033[0;0m"
@@ -80,9 +78,9 @@ def transcription(seq):
     return (' '*17) + 'RNA:' + ' ' + transcript.upper()
 
 
-
-def translate_dna(seq): # This is my homework for ProgA5. It translates genetic sequences into the corresponding polypeptides. 
-      
+#This function translates genetic sequences into the corresponding polypeptides. 
+def translate_dna(seq): 
+    import sys  
     codons = { # This is the dictionary relating codons(keys) to amino acids(values).           
         'ATA':'I', 'ATC':'I', 'ATT':'I', 'ATG':'M',
         'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACT':'T',
@@ -101,11 +99,14 @@ def translate_dna(seq): # This is my homework for ProgA5. It translates genetic 
         'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_',
         'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W',}
     
+    cyan  = "\033[1;36m"
+    reset = "\033[0;0m"
     polypeptide ="" # This line allows me to begin building my polypeptide, starting with zero amino acids.
     if len(seq)%3 == 0: # This makes sure that the sequence entered is divisible by 3, since codons are 3 bases long.
         for i in range(0, len(seq), 3): # This loop moves over the sequence and slices out the codons, then joins the resulting values together.
             codon = seq[i:i + 3]
             polypeptide += codons[codon]
+        sys.stdout.write(cyan)
         return polypeptide # this returns a polypeptide translated from the entered DNA sequence. 
     else:
         return 'Error: Sequence not divisible by 3. Cannot be translated.' # This gives an error message if the DNA sequence has too many or too few bases. 
